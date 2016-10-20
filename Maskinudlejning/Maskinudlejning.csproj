@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,11 +44,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -57,6 +66,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -64,6 +77,10 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -89,11 +106,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Bootstrap.FontAwsome.css" />
+    <Content Include="Content\Bootstrap.FontAwsome.min.css" />
+    <Content Include="Content\Images\bla.jpg" />
+    <Content Include="Content\Images\Categories\c17fa7c5104b44d0a011d95352a5b646.jpg" />
+    <Content Include="Content\Images\Categories\Container_Augsburg.jpg" />
+    <Content Include="Content\Images\Categories\Rock Piles.jpg" />
+    <Content Include="Content\Images\Categories\The-Demand-for-Second-hand-Construction-Machinery-Will-Increase-Greatly-in-3-5-years.jpg" />
+    <Content Include="Content\Images\close.png" />
+    <Content Include="Content\Images\gfx\agreement.png" />
+    <Content Include="Content\Images\gfx\toendermaskinudlejning.svg" />
+    <Content Include="Content\Images\gmap.JPG" />
+    <Content Include="Content\Images\loading.gif" />
+    <Content Include="Content\Images\next.png" />
+    <Content Include="Content\Images\prev.png" />
+    <Content Include="Content\Images\products\construction-machines-1.jpg" />
+    <Content Include="Content\Images\products\JCB_JZ140_exc.jpg" />
+    <Content Include="Content\Images\writing.jpg" />
+    <Content Include="Content\lightbox.css" />
+    <Content Include="Content\owl.carousel.css" />
+    <Content Include="Content\Images\brands\stiga_logo.png" />
+    <Content Include="Content\Styles.css">
+      <DependentUpon>Styles.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles.min.css">
+      <DependentUpon>Styles.css</DependentUpon>
+    </Content>
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\animation.gsap.min.js" />
+    <Content Include="Scripts\imagesloaded.pkgd.min.js" />
+    <Content Include="Scripts\isotope.pkgd.min.js" />
+    <Content Include="Scripts\jQuery.Bootstrap.min.js" />
+    <Content Include="Scripts\jquery.gsap.min.js" />
+    <Content Include="Scripts\lightbox.js" />
+    <Content Include="Scripts\masonry-horizontal.js" />
+    <Content Include="Scripts\myjs.js" />
+    <Content Include="Scripts\owl.carousel.min.js" />
+    <Content Include="Scripts\packery-mode.pkgd.min.js" />
+    <Content Include="Scripts\ScrollMagic.min.js" />
+    <Content Include="Scripts\ScrollToPlugin.min.js" />
+    <Content Include="Scripts\TweenMax.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -102,6 +162,23 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Views\_MainLayout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Content\Styles.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="Views\Home\Lejebetingelser.cshtml" />
+    <Content Include="Views\Home\Kontakt.cshtml" />
+    <Content Include="Views\Home\SortimentListe.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,8 +188,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

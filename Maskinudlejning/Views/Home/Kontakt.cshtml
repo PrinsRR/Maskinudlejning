@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Kontakt";
+    Layout = "~/Views/_MainLayout.cshtml";
+}
+
+<header id="KontaktHeader">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-push-6">
+                <h4 class="PopIn">Kontakt os i dag</h4>
+                <h2 class="PopIn">Ring til os eller skriv ved hjælp af vores kontaktform</h2>
+                <h3 class="PopIn">Vi vender tilbage til dig lorem bla lo lorem alal lorem bla bla</h3>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header>
+<div id="ContactInfoSection">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-xs-12">
+                <i class="fa fa-location-arrow"></i><ul>
+                    <li>Tønder maskinudlejning</li>
+                    <li>Hydrovej 4</li>
+                    <li>6270 Tønder</li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-xs-12">
+                <i class="fa fa-phone"></i><ul>
+                    <li>+45 21 90 61 61</li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-xs-12">
+                <i class="fa fa-home"></i><ul>
+                    <li>mandag-fredag 7:00-17:00</li>
+                    <li>lørdag 8:00-12:00</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+
+</div>
+<div id="ContactForm">
+    <div class="container">
+        @using (Html.BeginForm("bla", "bla", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="row">
+                <div class="col-sm-6 -col-xs-12"><input type="text" placeholder="Dit navn" /></div>
+                <div class="col-sm-6 -col-xs-12"><input type="email" placeholder="Din email" /></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12"><input type="text" placeholder="Emne" /></div>
+
+            </div>
+            <div class="row">
+                <div class="col-xs-12"><textarea placeholder="Skriv din besked her"></textarea></div>
+
+            </div>
+            <div class="row">
+                <div class="col-xs-12"><input type="submit" value="Send Besked" /></div>
+
+            </div>
+        }
+    </div>
+</div>

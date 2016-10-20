@@ -1,0 +1,203 @@
+﻿
+@{
+    ViewBag.Title = "SortimentListe";
+    Layout = "~/Views/_MainLayout.cshtml";
+}
+<script>
+
+</script>
+<div id="ProductBG" class="closerfunction">
+    <div class="row">
+        <div class="Product col-lg-6 col-md-8 col-xs-12">
+            <div class="closer closerfunction">X</div>
+            <div class="row">
+                <div class="col-sm-6 col-sm-pull-0 col-xs-12">
+                    <div class="ProductSlider">
+                        <div class="bigImg">
+                            <a href="~/Content/Images/products/construction-machines-1.jpg" data-lightbox="imagasde">
+
+                                <img src="~/Content/Images/products/construction-machines-1.jpg" />
+                            </a>
+                        </div>
+                        <div class="SmallImgs">
+                            <div class="SmallImg">
+                                <img src="~/Content/Images/products/JCB_JZ140_exc.jpg" />
+                            </div>
+                            <div class="SmallImg">
+                                <img src="~/Content/Images/products/JCB_JZ140_exc.jpg" />
+                            </div><div class="SmallImg">
+                                <img src="~/Content/Images/products/JCB_JZ140_exc.jpg" />
+                            </div><div class="SmallImg">
+                                <img src="~/Content/Images/products/JCB_JZ140_exc.jpg" />
+                            </div><div class="SmallImg">
+                                <img src="~/Content/Images/products/JCB_JZ140_exc.jpg" />
+                            </div>
+                        </div>
+                        <p>
+                            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar
+                            a. Donec sollicitudin molestie malesuada. Vivamus
+                            magna justo, lacinia eget consectetur sed, convallis
+                            t telus. N
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-sm-push-0 col-xs-12">
+                    <h2 class="ProductName">bla blabla</h2>
+                    <div class="ProductSettings">
+                        <div id="LejeProdukt"></div>
+                        <div id="MaengdeProdukt">
+                            <div class="form-group">
+                                <input type="number" class="form-control" placeholder="Antal m3" min="1" />
+                            </div>
+                            <div class="row"><div class="left col-xs-6">Pris pr. m3</div><div class="right pris col-xs-6">100 kr.</div></div>
+                            <div class="row"><div class="left col-xs-6">Mængde i valgt</div><div class="right maengde col-xs-6">51 m3</div></div>
+                            <div class="row"><div class="left col-xs-6">Total</div><div class="right total col-xs-6">5100 kr.</div></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="row">
+                <div class="col-xs-12 right">
+                    <div class="cancel closerfunction">afbryd</div>
+                    <div class="AddToCart">Tilføj til kurv</div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 hidden-xs">
+                <img class="SlideMeIn" src="~/Content/Images/gfx/agreement.png" />
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <h4 class="PopIn">Stort udvalg i vores mange kategorier</h4>
+                <h2 class="PopIn">Tag et kig, eller kontakt os for personlig ekspertise</h2>
+                <h3 class="PopIn">Vi sørger for sikker og hurtig levering til markedets bedste priser</h3>
+                <a class="CustomBTN PopIn" href="#">Se vores udvalg</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="CategorySorter" onclick="FilterProducts('sandgrus')">
+                <div class="Darken"></div>
+                <h2>Sand og grus</h2>
+                <div class="KatBTN">Se udvalg</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="CategorySorter" onclick="FilterProducts('maskiner')">
+                <div class="Darken"></div>
+                <h2>Maskiner</h2>
+                <div class="KatBTN">Se udvalg</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="CategorySorter" onclick="FilterProducts('haven')">
+                <div class="Darken"></div>
+
+                <h2>Alt til haven</h2>
+                <div class="KatBTN">Se udvalg</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="CategorySorter" onclick="FilterProducts('andet')">
+                <div class="Darken"></div>
+
+                <h2>Andet</h2>
+                <div class="KatBTN">Se udvalg</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="grid container">
+    <div class="col-lg-3 col-sm-4 col-xs-6 grid-sizer grid-item"></div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 grid-item sandgrus" data-id="1">
+        <div class="inner">
+            <div class="ImageHolder" style="background-image: url('../../Content/Images/Categories/Rock Piles.jpg');"></div>
+            <div class="HiddenBox">
+                <h4>Lorem ipsum</h4>
+                <h5>bygge maskiner</h5>
+                <span class="Pris">100 kr. pr. dag</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 grid-item maskiner" data-id="1">
+        <div class="inner">
+            <div class="ImageHolder" style="background-image: url('../../Content/Images/Categories/Rock Piles.jpg');"></div>
+            <div class="HiddenBox">
+                <h4>Lorem ipsum</h4>
+                <h5>bygge maskiner</h5>
+                <span class="Pris">100 kr. pr. dag</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 grid-item andet" data-id="1">
+        <div class="inner">
+            <div class="ImageHolder" style="background-image: url('../../Content/Images/Categories/Rock Piles.jpg');"></div>
+            <div class="HiddenBox">
+                <h4>Lorem ipsum</h4>
+                <h5>bygge maskiner</h5>
+                <span class="Pris">100 kr. pr. dag</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 grid-item sandgrus" data-id="1">
+        <div class="inner">
+            <div class="ImageHolder" style="background-image: url('../../Content/Images/Categories/Rock Piles.jpg');"></div>
+            <div class="HiddenBox">
+                <h4>Lorem ipsum</h4>
+                <h5>bygge maskiner</h5>
+                <span class="Pris">100 kr. pr. dag</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-sm-4 col-xs-6 grid-item maskiner" data-id="1">
+        <div class="inner">
+            <div class="ImageHolder" style="background-image: url('../../Content/Images/Categories/Rock Piles.jpg');"></div>
+            <div class="HiddenBox">
+                <h4>Lorem ipsum</h4>
+                <h5>bygge maskiner</h5>
+                <span class="Pris">100 kr. pr. dag</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 grid-item haven" data-id="1">
+        <div class="inner">
+            <div class="ImageHolder" style="background-image: url('../../Content/Images/Categories/Rock Piles.jpg');"></div>
+            <div class="HiddenBox">
+                <h4>Lorem ipsum</h4>
+                <h5>bygge maskiner</h5>
+                <span class="Pris">100 kr. pr. dag</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 grid-item haven" data-id="1">
+        <div class="inner">
+            <div class="ImageHolder" style="background-image: url('../../Content/Images/Categories/Rock Piles.jpg');"></div>
+            <div class="HiddenBox">
+                <h4>Lorem ipsum</h4>
+                <h5>bygge maskiner</h5>
+                <span class="Pris">100 kr. pr. dag</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 grid-item andet" data-id="1">
+        <div class="inner">
+            <div class="ImageHolder" style="background-image: url('../../Content/Images/Categories/Rock Piles.jpg');"></div>
+            <div class="HiddenBox">
+                <h4>Lorem ipsum</h4>
+                <h5>bygge maskiner</h5>
+                <span class="Pris">100 kr. pr. dag</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,194 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_MainLayout.cshtml";
+}
+<div class="container-fluid" id="FrontFirstSection">
+    <div class="Darken"></div>
+    <div class="container">
+        <h1 class="PopIn">Velkommen til Tøndermaskinudlejning</h1>
+        <h3 class="PopIn">
+            20 års erfaring indenfor udlejning af maskiner til
+            byggebranchen, håndværkere og private
+        </h3>
+    </div>
+    <a class="GoDown" href="#Frontsec2">
+        <i class="fa fa-angle-double-down"></i>
+    </a>
+</div>
+<div class="container" id="Frontsec2">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Et professionelt udlejningsfirma</h2>
+            <h4>Med speciale i udlejning af kvalitets maskiner</h4>
+        </div>
+    </div>
+    <div class="row">
+        @for (int ti = 0; ti < 3; ti++)
+        {
+            <div class="col-sm-12 col-md-4">
+                <h4 class="HeaderUnderlined">Du ringer vi bringer</h4>
+                <p>
+                    Pellentesque in ipsum id orci porta dapibus.
+                    Quisque velit nisi, pretium ut lacinia in, elemen
+                    tum id enim. Vestibulum ante ipsum primis in fa
+                    ucibus orci luctus et ultrices
+                </p>
+            </div>
+
+        }
+    </div>
+</div>
+<div id="Frontsec3">
+    <div class="Brighten"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="ImageHolder">
+                    <a href="~/Content/Images/Categories/Container_Augsburg.jpg" data-lightbox="imagasde">
+                        <img src="~/Content/Images/Categories/Container_Augsburg.jpg" />
+                    </a>
+                </div>
+                <div class="SlidingBox">
+                    <div class="BG">
+                        <h3><span class="HeadTextColor">Alt</span> til havefolket</h3>
+                        <h5>Donec rutrum congue leo egetmal</h5>
+                        <hr />
+                        <ul>
+                            <li>Mosfjerner</li>
+                            <li>Mosfjerner</li>
+                            <li>Mosfjerner</li>
+                            <li>Mosfjerner</li>
+                            <li>Mosfjerner</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="Spacer hidden-xs hidden-sm"></div>
+                <div class="ImageHolder">
+                    <a href="~/Content/Images/Categories/Container_Augsburg.jpg" data-lightbox="imagasde">
+                        <img src="~/Content/Images/Categories/Container_Augsburg.jpg" />
+                    </a>
+                </div>
+                <div class="SlidingBox">
+                    <div class="BG">
+                        <h3><span class="HeadTextColor">Alt</span> til havefolket</h3>
+                        <h5>Donec rutrum congue leo egetmal</h5>
+                        <hr />
+                        <ul>
+                            <li>Mosfjerner</li>
+                            <li>Mosfjerner</li>
+                            <li>Mosfjerner</li>
+                            <li>Mosfjerner</li>
+                            <li>Mosfjerner</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="ImageHolder">
+                    <a href="~/Content/Images/Categories/Container_Augsburg.jpg" data-lightbox="imagasde">
+                        <img src="~/Content/Images/Categories/Container_Augsburg.jpg" />
+                    </a>
+                </div>
+                <div class="SlidingBox">
+                    <div class="BG">
+                        <h3><span class="HeadTextColor">Alt</span> til havefolket</h3>
+                        <h5>Donec rutrum congue leo egetmal</h5>
+                        <hr />
+                        <ul>
+                            <li>Mosfjerner</li>
+                            <li>Mosfjerner</li>
+                            <li>Mosfjerner</li>
+                            <li>Mosfjerner</li>
+                            <li>Mosfjerner</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="container-fluid" id="Frontsec4">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Fremhævede produkter</h2>
+        </div>
+    </div>
+    <div id="Fremhaevedeprodukter">
+        <div class="row">
+            @for (int ai = 0; ai < 8; ai++)
+            {
+                <a href="/Home/SortimentListe/" class="col-lg-3 col-col-sm-6">
+                    <div class="ImageHolder" style="background-image: url('../../Content/Images/Categories/Rock Piles.jpg');"></div>
+                    <div class="HiddenBox">
+                        <h4>Lorem ipsum</h4>
+                        <h5>bygge maskiner</h5>
+                        <span class="Pris">100 kr. pr. dag</span>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+    <a id="AllProducts" href="#">
+        <div>Se hele vores udvalg <i class="fa fa-angle-double-right"></i></div>
+    </a>
+</div>
+<div class="container-fluid">
+    <div id="Brand-slider" class="owl-carousel">
+        @for (int asi = 0; asi < 7; asi++)
+        {
+            <a href="#" class="item">
+                <img src="~/Content/Images/brands/stiga_logo.png" />
+            </a>
+        }
+    </div>
+</div>
+<div class="container-fluid" id="FrontLastSec">
+
+    <div id="Gmaps"></div>
+    <div class="Darken"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <h2>Find os</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-xs-12">
+                <i class="fa fa-location-arrow"></i>
+                <ul>
+                    <li>
+                        Tønder maskinudlejning
+                    </li>
+                    <li>Hydrovej 4</li>
+                    <li>6270 tønder</li>
+                </ul>
+            </div>
+
+
+            <div class="col-lg-4 col-xs-12">
+                <i class="fa fa-home"></i>
+                <ul>
+                    <li>
+                        +45 21 90 61 61
+                    </li>
+                    <li>
+                        mandag-fredag 7:00- 7:00
+                    </li>
+                    <li>lørdag 8:00-12:00</li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-xs-12">
+                <i class="fa fa-facebook"></i>
+                <ul>
+                    <li>
+                        <a href="#">Find os på facebook!</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

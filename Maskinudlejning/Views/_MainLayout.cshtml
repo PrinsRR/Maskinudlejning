@@ -1,0 +1,126 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+
+</head>
+<body>
+    <div id="BasketBG" class="basketclose">
+        <div class="row">
+            <div class="Basket col-lg-6 col-md-8 col-xs-12">
+                <div class="closer basketclose">X</div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2><i class="fa fa-shopping-cart"></i> Kurv</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Produktnavn</th>
+                                    <th>mængde</th>
+                                    <th>pris pr m3</th>
+                                    <th class="right">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="~/Content/Images/products/construction-machines-1.jpg" data-lightbox="imagasde">
+                                            <img src="~/Content/Images/products/construction-machines-1.jpg" />
+                                        </a>
+                                    </td>
+                                    <td>maskine blabla</td>
+                                    <td>5</td>
+                                    <td>100 kr.</td>
+                                    <td>500 kr.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/Content/Images/products/construction-machines-1.jpg" />
+                                    </td>
+                                    <td>maskine blabla</td>
+                                    <td>5</td>
+                                    <td>100 kr.</td>
+                                    <td>500 kr.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="~/Content/Images/products/construction-machines-1.jpg" data-lightbox="imagasde">
+                                            <img src="~/Content/Images/products/construction-machines-1.jpg" />
+                                        </a>
+                                    </td>
+                                    <td>maskine blabla</td>
+                                    <td>5</td>
+                                    <td>100 kr.</td>
+                                    <td>500 kr.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="~/Content/Images/products/construction-machines-1.jpg" data-lightbox="imagasde">
+                                            <img src="~/Content/Images/products/construction-machines-1.jpg" />
+                                        </a>
+                                    </td>
+                                    <td>maskine blabla</td>
+                                    <td>5</td>
+                                    <td>100 kr.</td>
+                                    <td>500 kr.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="TotalCost"><span>2500 kr.</span></div>
+                    </div>
+                </div>
+                <footer class="row">
+                    <div class="col-xs-12 right">
+                        <div class="cancel basketclose">afbryd</div>
+                        <div class="btn btn-success">Gå til betaling</div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>    <nav class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-xs-6">
+                <a href="/Home/Index/">
+                    <img src="~/Content/Images/gfx/toendermaskinudlejning.svg" />
+                </a>
+            </div>
+            <div class="col-md-7 hidden-sm hidden-xs">
+                <ul>
+                    <li><a href="/Home/Index/"><span>Forside</span></a></li>
+                    <li><a href="/Home/SortimentListe/"><span>Sortimentliste</span></a></li>
+                    <li><a href="/Home/Lejebetingelser/"><span>Lejebetingelser</span></a></li>
+                    <li><a href="/Home/Kontakt/"><span>Kontakt</span></a></li>
+                </ul>
+            </div>
+            <div class="col-md-2  col-xs-6 right">
+                <div class="icons">
+                    <i onclick="RevealMenu();" class="fa fa-bars hidden-md hidden-lg"></i>
+                    <i onclick="RevealBasket();" class="fa fa-shopping-cart"></i>
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="OffsiteMenu">
+        <ul>
+            <li><a href="/Home/Index/"><span>Forside</span></a></li>
+            <li><a href="/Home/SortimentListe/"><span>Sortimentliste</span></a></li>
+            <li><a href="/Home/Lejebetingelser/"><span>Lejebetingelser</span></a></li>
+            <li><a href="/Home/Kontakt/"><span>Kontakt</span></a></li>
+        </ul>
+    </div>
+    @RenderBody()
+</body>
+@Scripts.Render("~/bundles/js")
+
+
+</html>
